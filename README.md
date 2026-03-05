@@ -1,71 +1,46 @@
-AI Assignment – Simple Reflex Agent and Uninformed Search
+# AI Assignment – Simple Reflex Agent and Uninformed Search
 
-This repository contains the implementation of the Artificial Intelligence assignment.
+This repository contains the implementation for the Artificial Intelligence assignment.
 
-The assignment consists of three parts:
+Architecture Design
 
-1. Designing the architecture for Turing Test and CAPTCHA
-2. Developing a simple reflex agent that reads environmental parameters and determines AQI
-3. Implementing uninformed search algorithms such as BFS and DFS and applying them to a problem
+The architecture design for the Turing Test and CAPTCHA systems is explained in the file:
+docs/architecture.md
 
-Part 1 – Architecture Design
 
-The design architecture for both the Turing Test and CAPTCHA systems is explained in the documentation file inside the docs folder. The document describes the components involved and the general working process of each system.
+Simple Reflex Agent (AQI Agent)
 
-Part 2 – AQI Simple Reflex Agent
+A simple reflex agent is implemented that reads environmental sensor data from a file and determines the Air Quality Index (AQI) of the region.
 
-A simple reflex agent was developed in Python. The agent reads environmental data such as PM2.5 and PM10 values from a CSV file and calculates the Air Quality Index (AQI) based on predefined ranges.
+Files used:
+aqi_agent/aqi_agent.py
+aqi_agent/sample_sensor_data.csv
 
-Files related to the AQI agent are located in the aqi_agent folder.
-
-aqi_agent.py – Program that reads the sensor data and calculates AQI  
-sample_sensor_data.csv – Sample input file containing environmental data
-
-To run the AQI agent:
-
+To run the program:
 python aqi_agent/aqi_agent.py --file aqi_agent/sample_sensor_data.csv
 
 
-Part 3 – Uninformed Search Algorithms
+Uninformed Search Algorithms
 
-Breadth First Search (BFS) and Depth First Search (DFS) algorithms were implemented and applied to the Eight Queens problem.
+The following search algorithms are implemented:
+Breadth First Search (BFS)
+Depth First Search (DFS)
+Depth Limited Search
+Iterative Deepening DFS
 
-Eight Queens Problem
+The implementation is in:
+search/core.py
 
-The objective of the Eight Queens problem is to place eight queens on a chessboard such that no two queens attack each other. This means that no two queens can share the same row, column, or diagonal.
 
-The search algorithm explores possible placements of queens and checks whether the configuration is valid.
+Example Problem
 
-Files related to the search implementation are located in the following folders:
+The search problem implemented is the Eight Queens problem.
 
-search/ – contains the BFS and DFS implementations  
-problems/ – contains the Eight Queens problem definition
+File:
+eight_queens/eight_queens.py
 
-To run the program:
-
+To run the comparison:
 python search/run_compare.py
 
-The program prints information such as:
 
-nodes expanded  
-maximum frontier size  
-time taken  
-solution depth  
-
-These values are used to compare the performance of the search algorithms.
-
-Programming Language
-
-The programs in this repository were implemented using Python 3. No external libraries were required.
-
-Repository Structure
-
-ai-assignment  
-README.md  
-requirements.txt  
-docs  
-aqi_agent  
-search  
-problems
-
-This assignment demonstrates basic AI concepts including reflex agents and uninformed search techniques.
+This repository includes the architecture design, reflex agent implementation, search algorithms, and the example problem required for the assignment.
